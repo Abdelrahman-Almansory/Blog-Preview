@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+    --background--color: hsl(47, 88%, 63%);
+    --card--bg--color: hsl(0, 0%, 100%);
+    --gray--500--color: hsl(0, 0%, 42%);
+    --gray--950--color: hsl(0, 0%, 7%);
+
+    --font--weight--XL: 800;
+    --font--weight--M: 500;
+
+    --font--size: 16px;
+
+    --font--family: "Figtree", serif;
+}
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+* {
+    margin: 0;
+    padding: 0;
+}
+  
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+  
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+  
+input, button, textarea, select {
+    font: inherit;
+}
+  
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+  
+p {
+    text-wrap: pretty;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+}
+
+body {
+    background-color: var(--background--color);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font--size);
+    font-family: var(--font--family);
+}
+
+main {
+    background-color: var(--card--bg--color);
+    max-width: 400px;
+    max-height: 550px;
+    padding: 25px;
+    border-radius: 30px;
+    border: 2px solid var(--gray--950--color);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 10px 10px 0px;
+    transition: 0.15s ease-in-out;
+}
+
+main:hover {
+    box-shadow: 15px 15px 0px;
+}
+
+main p::selection, main h1::selection {
+    color: var(--background--color);
+    background-color: var(--gray--950--color);
+}
+
+.blog-image {
+    border-radius: 20px;
+    width: 100%;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.highlight {
+    width: 85px;
+    background-color: var(--background--color);
+    padding: 4px 9px;
+    font-weight: var(--font--weight--XL);
+    border-radius: 6px;
+}
+
+.info h1 {
+    font-weight: var(--font--weight--XL);
+    cursor: pointer;
+    transition: 0.15s;
+}
+
+.info h1:hover {
+    color: var(--background--color);
+}
+
+.faint-text {
+    color: var(--gray--500--color);
+    margin-top: -5px;
+}
+
+
+footer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-profile {
+    height: 40px;
+}
+
+footer p {
+    font-weight: var(--font--weight--XL);
+}
+
+@media (max-width: 420px) {
+    body {
+        margin-inline: auto;
+    }
+
+    main {
+        max-width: 350px;
+        margin: 20px;
+    }
+}
+
